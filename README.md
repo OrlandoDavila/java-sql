@@ -136,6 +136,10 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
 
   * This can be done with the INSERT INTO clause
   </details>
+  <p>
+    INSERT INTO customers(customer_id, company_name, contact_name, address, city, postal_code, country)<br>
+    VALUES('SHIRE', 'The Shire', 'Bilbo Baggins', '1 Hobbit Hole', 'Bag End', '111', 'Middle Earth')<br>
+  </p>
 
 ```SQL
 
