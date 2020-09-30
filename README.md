@@ -30,9 +30,11 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
 ### Answer the following data queries. Keep track of the SQL you write by pasting it into this document under its appropriate header below in the provided SQL code block. You will be submitting that through the regular fork, change, pull process
 
 * [ ] ***find all customers that live in London. Returns 6 records***
-  SELECT contact_name,company_name,contact_title,city
-  FROM customers
-  WHERE city = 'London'
+<p>
+  SELECT contact_name,company_name,contact_title,city<br>
+  FROM customers<br>
+  WHERE city = 'London'<br>
+</p>  
   <details><summary>hint</summary>
 
   * This can be done with SELECT and WHERE clauses
