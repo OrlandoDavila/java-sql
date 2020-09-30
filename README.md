@@ -45,6 +45,11 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
 ```
 
 * [ ] ***find all customers with postal code 1010. Returns 3 customers***
+<p>
+  SELECT contact_name,company_name,contact_title,postal_code<br>
+  FROM customers<br>
+  WHERE postal_code = '1010'<br>
+</p>
 
   <details><summary>hint</summary>
 
@@ -56,6 +61,11 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
 ```
 
 * [ ] ***find the phone number for the supplier with the id 11. Should be (010) 9984510***
+<p>
+  SELECT company_name, supplier_id, phone<br>
+  FROM suppliers<br>
+  WHERE supplier_id = ('11')<br>
+</p>
 
   <details><summary>hint</summary>
 
@@ -67,7 +77,11 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
 ```
 
 * [ ] ***list orders descending by the order date. The order with date 1998-05-06 should be at the top***
-
+<p>
+  Select *<br>
+  FROM orders<br>
+  ORDER BY order_date DESC<br>
+</p>
   <details><summary>hint</summary>
 
   * This can be done with SELECT, WHERE, and ORDER BY clauses
@@ -78,7 +92,11 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
 ```
 
 * [ ] ***find all suppliers who have names longer than 20 characters. Returns 11 records***
-
+<p>
+  SELECT company_name, contact_name, contact_title<br>
+  FROM suppliers<br>
+  WHERE length(company_name) > 20<br>
+</p>
   <details><summary>hint</summary>
 
   * This can be done with SELECT and WHERE clauses
@@ -90,7 +108,11 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
 ```
 
 * [ ] ***find all customers that include the word 'MARKET' in the contact title. Should return 19 records***
-
+<p>
+  SELECT company_name, contact_name, contact_title<br>
+  FROM customers<br>
+  WHERE UPPER(contact_title) like '%MARKET%'<br>
+</p>  
   <details><summary>hint</summary>
 
   * This can be done with SELECT and a WHERE clause using the LIKE keyword
